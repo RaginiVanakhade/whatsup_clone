@@ -1,11 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
-function WpHomePage() {
+const WpHomePage = () => {
   return (
-    <>
     <div>WpHomePage</div>
-    </>
   )
 }
 

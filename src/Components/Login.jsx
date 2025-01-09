@@ -1,38 +1,56 @@
-import React from 'react'
-import whatsupLogo from '../assets/whatsupLogo.jpg'
-import { Link } from 'react-router-dom'
-import { FaDownload} from 'react-icons/fa'
+import React from 'react';
+import whatsupLogo from '../assets/whatsupLogo.jpg';
+import { Link } from 'react-router-dom';
+import { FaDownload } from 'react-icons/fa';
 
 const Login = () => {
-    function DownloadWhatsup() {
-        console.log("download wp");
-    }
-  return (
-   <>
-   <div className='bg-amber-50 h-screen '>
-    <div className='flex justify-end'>
-        <button className='bg-green-400 p-4 m-6 rounded-3xl border-black border-solid flex gap-6' onClick={DownloadWhatsup}> Download
-            <div className=''> <FaDownload/></div>
-        </button>
-    </div>
-    <div className=' flex justify-center items-center'>
-        <div className='bg-white shadow-2xl'>
-             <div className='bg-green-200 md:m-10 sm:m-10 m-6 shadow-2xl p-2 h-96 w-96 text-center rounded-xl'>
-                <div className='flex justify-center gap-2 m-2'>
-                     <img src={whatsupLogo} alt="whatsupLogo" className='rounded-full' />
-                </div><br />
-        <Link to="/wphomepage">
-        <button className='bg-green-400 w-20 hover:bg-green-600 p-2 rounded-xl text-white'>Login</button>
-        </Link>
-        <div>
-            <h2 className='text-2xl m-6'>Login into whatsup web</h2>
-        </div>
-             </div>
-        </div>
-    </div>
-   </div>
-   </>
-  )
-}
+  function handleDownloadWp() {
+    alert("Visit https://web.whatsapp.com to download WhatsApp Web.");
+  }
 
-export default Login
+  return (
+    <>
+      <div className="bg-amber-50 min-h-screen flex flex-col justify-between">
+        <div className="flex justify-between items-center p-4">
+          <div className="flex items-center gap-2 text-green-600 font-bold">
+            <img src={whatsupLogo} alt="WhatsApp Logo" className="w-10 h-10" />
+            <div className="text-lg">WhatsApp</div>
+          </div>
+          <button
+            className="rounded-3xl border border-black flex items-center gap-2 px-6 py-2 bg-green-500 hover:bg-black hover:text-white"
+            onClick={handleDownloadWp}
+          >
+            Download <FaDownload />
+          </button>
+        </div>
+
+
+        <div className="flex flex-1 justify-center items-center px-4">
+          <div className="bg-white shadow-2xl border border-black rounded-3xl w-full max-w-xl p-8">
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <img
+                  src={whatsupLogo}
+                  alt="WhatsApp Logo"
+                  className="w-24 h-24 rounded-full"
+                />
+              </div>
+              <h2 className="text-2xl font-semibold mb-6">Login to WhatsApp Web</h2>
+              <Link to="wphomepage">
+                <button className="bg-green-400 w-32 hover:bg-green-600 px-4 py-2 rounded-xl text-white">
+                  Login
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center text-stone-600 text-sm p-4">
+          Your personal messages are end-to-end encrypted
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Login;
