@@ -21,26 +21,3 @@ function App() {
 export default App
 
 
-
-// import React, { useState } from 'react'
-// import { Route, Routes } from 'react-router-dom'
-// import WpHomePage from './Components/WpHomePage'
-
-// const App = () => {
-//   const [login, setLogin] = useState(false)
-//   return (
-//     <>
-//     <h1>routing app</h1>
-//     <Routes>
-//       <Route path='/' element={}></Route>
-//     </Routes>
-//     </>
-//   )
-// }
-
-// function protectRout() {
-
-// }
-
-
-// export default App
